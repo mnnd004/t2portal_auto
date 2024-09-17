@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Login",
+    "version": "1.0",
+    "description": "Automatically login into Tokyo Tech Portal.",
+    "permissions": ["activeTab", "scripting"],
+    "content_scripts": [
+      {
+        "matches": ["https://portal.nap.gsic.titech.ac.jp/GetAccess/Login*"],
+        "js": ["login.js"]
+      },
+      {
+        "matches": ["https://portal.nap.gsic.titech.ac.jp/GetAccess/Login?Template=idg_key*"],
+        "js": ["matrix.js"]
+      }
+    ]
+  }
+  
